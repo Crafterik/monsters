@@ -1,9 +1,28 @@
-/* ¡‡ÁÓ‚˚Â ÒÚËÎË */
+/* main.css */
 :root {
     --bg: #FFFFFF;
     --text: #37352F;
     --gray: #9B9A97;
     --light-gray: #EBECED;
+    --hover-bg: rgba(55, 53, 47, 0.08);
+    --sidebar-bg: #FBFBFA;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1F1F1F;
+        --text: #FFFFFF;
+        --gray: #9B9A97;
+        --light-gray: #2F2F2F;
+        --hover-bg: rgba(255, 255, 255, 0.08);
+        --sidebar-bg: #171717;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -13,4 +32,75 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    background: var(--bg);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--sidebar-bg);
+    border-radius: 8px;
+    border: 1px solid var(--light-gray);
+}
+
+.content-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+li:before {
+    content: "‚Ä¢";
+    position: absolute;
+    left: 0;
+    color: var(--gray);
+}
+
+/* –°—Å—ã–ª–∫–∏ */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* –ê–¥–∞–ø—Ç–∏–≤–Ω–æ—Å—Ç—å */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }
